@@ -1,6 +1,7 @@
 import { version } from '../package.json'
 import { requestIdleCallbackIfAvailable } from './utils/async'
-import { x64hash128 } from './utils/hashing'
+// import { x64hash128 } from './utils/hashing'
+import { x86hash32 } from './utils/hashing'//覃子俊添加 2021年6月17日
 import { errorToObject } from './utils/misc'
 import getBuiltinComponents, { BuiltinComponents, UnknownComponents } from './sources'
 import { watchScreenFrame } from './sources/screen_frame'
@@ -86,7 +87,8 @@ export function componentsToDebugString(components: UnknownComponents): string {
 }
 
 export function hashComponents(components: UnknownComponents): string {
-  return x64hash128(componentsToCanonicalString(components))
+  // return x64hash128(componentsToCanonicalString(components))
+  return x86hash32(componentsToCanonicalString(components))//覃子俊添加 2021年6月17日
 }
 
 /**
