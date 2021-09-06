@@ -22,7 +22,7 @@ export default { load, hashComponents, componentsToDebugString }
 // The exports below are for private usage. They may change unexpectedly. Use them at your own risk.
 /** Not documented, out of Semantic Versioning, usage is at your own risk */
 export const murmurX64Hash128 = x64hash128
-export const murmurx86hash328 = x86hash32//覃子俊添加 2021年6月17日
+export const murmurx86hash32 = x86hash32//覃子俊添加 2021年6月17日
 export {
   getFullscreenElement,
   isAndroid,
